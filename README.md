@@ -1,4 +1,4 @@
-# Vision Transformer (ViT) on CIFAR-10 🖼️🔬
+# Vision Transformer (ViT) on CIFAR-10 🖼️
 
 ## 🎯 Goal
 The primary goal of this project was to **implement a Vision Transformer (ViT)** and train it on the **CIFAR-10 dataset**. The objective was to **achieve the highest possible test accuracy** by fine-tuning a pre-trained model, while also building a ViT from scratch to gain a deeper understanding of the architecture defined in the paper: **"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale" (Dosovitskiy et al., ICLR 2021).**
