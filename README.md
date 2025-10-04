@@ -97,22 +97,6 @@ Training the ViT from scratch on CIFAR-10 yielded much lower accuracies, highlig
 -   PyTorch & Timm Documentation
 -   CIFAR-10 Dataset ([Krizhevsky et al.](https://www.cs.toronto.edu/~kriz/cifar.html))
 
-## 🚀 Analysis & Key Takeaways
-
-1.  **Transfer Learning is Paramount:** The enormous **~73% accuracy gap** between the fine-tuned model (98.7%) and the best from-scratch model (25.33%) is the most critical takeaway. Vision Transformers are **extremely data-hungry** and fail to generalize on small datasets like CIFAR-10 without prior learning on a massive dataset like ImageNet.
-
-2.  **Adapting to Small Images and Datasets:** Even though CIFAR-10 images are small (32×32), applying a transformer was non-trivial. The success of the fine-tuned model depended on adapting the pre-trained positional embeddings and using strong regularization and data augmentation to prevent overfitting.
-
-3.  **Depth/Width Trade-offs for Scratch Training:** The from-scratch experiments showed that increasing model capacity (making it wider or deeper) was **detrimental** to performance on CIFAR-10. This indicates a "less is more" approach is needed, as larger models overfit more severely without a large dataset to learn from.
-
-4.  **Patch Size Matters:** Using a smaller `2x2` patch size (creating a longer sequence of 256 tokens) gave a slight edge over `4x4` patches (64 tokens) in the from-scratch experiments. This suggests that for low-resolution images, higher sequence granularity can be beneficial for capturing finer details.
-
----
-
-## 📖 References
--   Dosovitskiy et al., 2021: *An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale* ([Paper Link](https://arxiv.org/abs/2010.11929))
--   PyTorch & Timm Documentation
--   CIFAR-10 Dataset ([Krizhevsky et al.](https://www.cs.toronto.edu/~kriz/cifar.html))
 
 
 
